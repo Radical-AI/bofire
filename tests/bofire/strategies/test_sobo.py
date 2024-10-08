@@ -215,7 +215,7 @@ def test_get_acqf_input(acqf, num_experiments, num_candidates):
         data_model=RandomStrategyDataModel(domain=benchmark.domain)
     )
     experiments = benchmark.f(
-        random_strategy._ask(n=num_experiments),
+        random_strategy._ask(candidate_count=num_experiments),
         return_complete=True,  # type: ignore
     )
 
