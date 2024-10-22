@@ -21,7 +21,7 @@ class FactorialStrategy(Strategy):
                 "The strategy automatically determines how many candidates to "
                 "propose."
             )
-        return pd.DataFrame.from_dict(
+        return pd.DataFrame(
             [
                 {e[0]: e[1] for e in combi}
                 for combi in self.domain.inputs.get_categorical_combinations()
